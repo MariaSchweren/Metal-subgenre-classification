@@ -17,8 +17,12 @@ for line in Linklist:
 
     #title = DOMdocument.title.string 
     name = DOMdocument.find("h1", class_='band_name')
-
-    logo = DOMdocument.find("a",  id="logo")['href']
+    
+    logo_prior = DOMdocument.find("a",  id="logo")
+    if logo_prior  != None:
+        logo = logo_prior.attrs['href']
+    else:
+        continue
 
     Genre = DOMdocument.find_all(['dl','dd'], {'class': "float_right"})
     for div in Genre:
