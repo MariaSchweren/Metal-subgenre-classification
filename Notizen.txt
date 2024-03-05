@@ -1,0 +1,12 @@
+backend-bearbeiten von Anfragen, berechnet und stellt Daten zur Verfügung 
+frontend-stateless, Websiteinterface für Darstellung
+links vom backend generiert -> aaData als Array 
+REST-Standard für Kommunikation frontend & backend
+
+für scraper:
+aaData Array mit links
+1. schauen wie viele Einträge max 
+2. alle ermittelten Einträge scrapen
+f-string: existierende variablen in einen String einfügen
+formt aus variablen finalen string
+Reiter-Buchstaben auf alle Reiter erweitern 
