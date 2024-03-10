@@ -20,6 +20,8 @@ for entry in Datalist:
         reqAnswer = requests.get(logo, headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}, stream = True)
         if reqAnswer.status_code != 200: # Eventuell Datei nicht gefunden oder so
             print("download failed", bandName)
+        # VORSICHT: Manchmal kann der Bandname nicht als Dateiname gespeichert werden weil Windows das nicht will (bei ~ zB usw)
+        # Daher evtl abändern oder ohne Bandname speichern!
         fileName = bandName + "_" + logo.split("/")[-1].split("?")[0] # Dateiname wird aus Bandname und Name aus Logolink zusammengebastelt: /284593.jpg?124 -> bla_284593.jpg
         print(fileName)
         # lade Datei strückweise herunter um den Arbeitsspeicher zu schonen
