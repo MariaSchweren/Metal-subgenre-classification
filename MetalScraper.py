@@ -14,7 +14,7 @@ for line in Linklist:                                                           
     Data = {}                                                                                                   #überflüssig
     DOMdocument = BeautifulSoup(content, 'html.parser')                                                         #parsen von website content mit bs4
 
-    #title = DOMdocument.title.string 
+    
     name = DOMdocument.find("h1", class_='band_name')                                                           #suche nach Name im html dok
     
     logo_prior = DOMdocument.find("a",  id="logo")                                                              #suche nach logo im html dok / find gibt 'None' zurück, wenn es nichts findet
@@ -23,8 +23,7 @@ for line in Linklist:                                                           
     else:
         print(f"{name} has no logo!")                                                                           #sonst, gib über print aus, dass diese Band kein Logo hat
         continue                                                                                                #überspringt Bands ohne Logo -> springt zum Schleifenbeginn und setzt fort
-   # print(name)
-    #logo = DOMdocument.find("a",  id="logo")['href']
+  
 
     Genre = DOMdocument.find_all(['dl','dd'], {'class': "float_right"})                                         #Genre in html finden -> war über d1 & dd markiert, float right = Seitenaufbau frontend (genre steht rechts) 
     for div in Genre:                                                                                           #find_all gibt iterable zurück, nur mit 1 Eintrag 
