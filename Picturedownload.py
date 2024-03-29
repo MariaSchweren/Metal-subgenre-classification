@@ -5,7 +5,7 @@ import re
 #Datalist.csv einlesen 
 #{'Connection': 'keep-alive', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'python-requests/2.13.0'}
 
-Datalist = open("Datalist2.csv", encoding="utf-8")
+Datalist = open("Datalist.csv", encoding="utf-8")
 #for schleife für alle Einträge in Datalist
 for entry in Datalist:   
     #time.sleep(3) 
